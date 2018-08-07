@@ -1,22 +1,63 @@
 //Logo
 .logo {
   height: 3.25rem;
+  margin-left: 3rem;
 }
 
 
 //Searchbox
 .search {
+  display: flex;
+  flex: 0 0 40%;
+  justify-content: center;
+  align-items: center;
+
   &__input {
+    width: 90%;
+    margin-right: -3.25rem;
+    padding: 0.7rem 2rem;
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    background-color: var(--color-grey-light-2);
+    border: 0;
+    border-radius: 100px;
+    transition: all 0.2s;
+
+    &:focus {
+      width: 100%;
+      background-color: var(--color-grey-light-3);
+      outline: none;
+    }
+
+    &::-webkit-input-placeholder {
+      font-weight: 100;
+      color: var(--color-grey-light-4);
+    }
 
   }
 
-  &__button {
+  &__input:focus+ &__button {
+    background-color: var(--color-grey-light-3);
+  }
 
+  &__button {
+    background-color: var(--color-grey-light-2);
+    border: 0;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      transform: translateY(2px);
+    }
   }
 
   &__icon {
     width: 2rem;
     height: 2rem;
+    fill: var(--color-dark-grey-3);
   }
 }
 
